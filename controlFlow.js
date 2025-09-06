@@ -73,3 +73,4 @@ for(let fruit of fruits){
 for(key in fruits){
     console.log(`${key}:${fruits[key]}`);
 }   
+
