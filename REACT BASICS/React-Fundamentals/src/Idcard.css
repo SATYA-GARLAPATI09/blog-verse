@@ -1,0 +1,38 @@
+.id-card {  
+    border: 1px solid #ccc;  
+    border-radius: 8px;  
+    padding: 16px;  
+    max-width: 300px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    margin: 16px auto;  
+    text-align: center;  
+}
+.id-card img {  
+    border-radius: 50%;  
+    width: 100px;  
+    height: 100px;  
+    object-fit: cover;  
+    margin-bottom: 16px;  
+}
+.id-card h2 {  
+    font-size: 1.5em;  
+    margin-bottom: 8px;  
+    color: #333;  
+}
+.id-card h4 {  
+    font-size: 1.2em;  
+    margin-bottom: 4px;  
+    color: #666;  
+}
+.id-card p {  
+    font-size: 1em;  
+    color: #555;  
+    margin: 4px 0;  
+}
+.id-card .label {
+    font-weight: bold;
+    color: #333;
+}
+.id-card .value {
+    color: #555;
+}

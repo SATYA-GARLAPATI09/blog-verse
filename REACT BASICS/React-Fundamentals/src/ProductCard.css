@@ -1,0 +1,23 @@
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 16px auto;
+    text-align: center;
+}
+.product-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: #8e2929ff;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+.not-available {
+    color: red;
+    font-weight: bold;
+}

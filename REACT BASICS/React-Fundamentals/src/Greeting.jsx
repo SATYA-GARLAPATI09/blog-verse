@@ -1,10 +1,10 @@
 import React from 'react';
-function Greeting({ receiverName, receiverAge } ) {
+function Greeting({ pro } ) {
     return (
-        <div>
-          <h1>Hello, {receiverName}</h1>
-         <h1>age = {receiverAge}</h1>
-        </div>
+      
+        <>
+        
+        </>
     );
   }
 
