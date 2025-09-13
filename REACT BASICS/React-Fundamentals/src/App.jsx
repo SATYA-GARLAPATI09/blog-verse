@@ -6,49 +6,55 @@ import Car from "./Car.jsx";
 import "./App.css";
 import BlogPost from "./BlogPost.jsx";
 import IdCard from "./idcard.jsx";
+import { useState } from "react";
 function App() {
-  const product = {
-    name: "Laptop",
-    price: 999.99,
-    isAvailable: true,
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount((count) => count + 1);
   };
-  const product1 = {
-    name: "Laptop",
-    price: 999.99,
-    isAvailable: false,
+  const decrement = () => {
+    setCount((count) => count - 1);
   };
-  const products = [
-    { name: "Laptop", price: 999.99, isAvailable: true },
-    { name: "Smartphone", price: 699.99, isAvailable: false },
-    { name: "Tablet", price: 499.99, isAvailable: true },
-  ];
-  const posts = [
-    {
-      Author: "John Doe",
-      Title: "React Basics",
-      Content: "This is a blog post about React basics.",
-    },
-    {
-      Author: "Jane Smith",
-      Title: "Advanced React",
-      Content: "This is a blog post about advanced React topics.",
-    },
-    {
-      Author: "Alice Johnson",
-      Title: "React Hooks",
-      Content: "This is a blog post about React Hooks.",
-    },
-  ];
+  const reset = () => {
+    setCount((count) => 0);
+  };
+  const [email, setemail] = useState("");
+  const [Password, setPassword] = useState("");
+  const handleemail = (event) => {
+    setemail(event.target.value);
+  };
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
 
   return (
     <div className="App">
-      {posts.map((posts) => (
-        <BlogPost
-          Author={posts.Author}
-          Title={posts.Title}
-          Content={posts.Content}
-        />
-      ))}
+      {/* buttons for increment and decrement */}
+      <button onClick={increment}>increment</button>
+      <button onClick={decrement}>decrement</button>
+      <button onClick={reset}>reset</button>
+      <p>count = {count}</p>
+
+      <input
+        type="text"
+        name="Email"
+        placeholder=" Enter Email"
+        onChange={handleemail}
+        value={email}
+      />
+      <input
+        type="Password"
+        name="Password"
+        placeholder="Enter Password"
+        onChange={handlePassword}
+        value={Password}
+      />
+      <button
+        type="submit"
+        onClick={() => alert(`Email: ${email}\nPassword: ${Password}`)}
+      >
+        Submit
+      </button>
 
       {/* <Profile />
       {
