@@ -26,7 +26,10 @@ function App() {
   const handlePassword = (event) => {
     setPassword(event.target.value);
   };
-
+  setFormData({
+    ...FormData,
+    [event.target.name]:event.target.value
+  })
   return (
     <div className="App">
       {/* buttons for increment and decrement */}
